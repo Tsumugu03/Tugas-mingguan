@@ -11,7 +11,7 @@
 <body>
     <!-- ✅ Navbar harus di sini -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">LaravelTI</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,10 @@
                     <a class="nav-link" href="/berita">berita</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/contact">contact</a>
+                    <a class="nav-link" href="/contact">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/datamahasiswa">Data Mahasiswa</a>
                 </li>
             </ul>
         </div>
