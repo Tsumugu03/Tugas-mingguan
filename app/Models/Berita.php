@@ -9,17 +9,17 @@ class Berita extends Model
 {
        private static $data_berita = [
         [
-        "judul" => "Farhat",
-        "slug" => "Farhat",
-        "penulis" => "jamhealth",
-        "konten" => "mantap djiwa."
+        "judul" => "Benjamin Paulus Dilantik, Menkes BGS Kini Dibantu 2 Wamen",
+        "slug" => "benjamin-paulus-dilantik,-menkes-bgs-kini-dibantu-2-wamen",
+        "penulis" => "detikhealth",
+        "konten" => "Kementerian Kesehatan RI menyebut pengangkatan dr Benjamin Paulus Octavianus sebagai Wakil Menteri Kesehatan tidak mengganti posisi Dante Saksono Harbuwono. Kepala Biro Komunikasi dan Informasi Publik Aji Muhawarman menyebut pengangkatan tersebut menambah posisi wamenkes."
         ],
         
         [
-        "judul" => "Harry kane cetak hattrick",
-        "slug" => "harry-kane-cetak-hattrick",
-        "penulis" => "munchen news",
-        "konten" => "ambalabu ."
+        "judul" => "Houthi di Yaman menahan 9 staf PBB lagi",
+        "slug" => "houthi-di-yaman-menahan-9-staf-pbb-lagi",
+        "penulis" => "AP News",
+        "konten" => "Sejak 2021, kelompok Houthi yang didukung Iran dikabarkan telah menahan total 53 staf PBB. Langkah ini dikritik keras karena mengganggu pekerjaan kemanusiaan di Yaman."
         ]
     ];
 

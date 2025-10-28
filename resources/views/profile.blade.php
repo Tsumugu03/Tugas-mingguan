@@ -1,9 +1,12 @@
 @extends('layouts.main')
 
-@section('content')
-<h1>profile</h1>
+@section('title', 'PROFIL')
 
-<h3>{{ $nama }}</h3>
-<p>{{ $nohp }}</p>
-<img src="{{ $foto }}" alt="132098-1700211169.webp" style="max-width: 200px;">
+@section('content')
+    <div class="hero" style="text-align:center; padding:90px 20px;">
+    <h1>👤 Profil</h1>
+    <p>Nama: Hammam Al Kamil</p>
+    <p>Alamat: Jepara, Jawa Tengah</p>
+    <p>Hobi: Membaca & Ngoding</p>
+</div>
 @endsection
