@@ -2,23 +2,19 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MahasiswaSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         DB::table('mahasiswas')->insert([
-            'name' => "Yono",
-            'nim' => 1432564811,
-            'prodi' => "Ilmu Hitam",
-            'email' => "yn0@email.com",
-            'nohp' =>62745678,
+            'nama' => 'Bon Jovi',
+            'nim' => 12345678,
+            'prodi' => 'Teknologi Informasi',
+            'email' => 'farel@gmail.com',
+            'nohp' => 62857326329,
         ]);
-        }
+    }
 }

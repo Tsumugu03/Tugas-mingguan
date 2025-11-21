@@ -9,10 +9,10 @@ class Berita extends Model
 {
        private static $data_berita = [
         [
-        "judul" => "Benjamin Paulus Dilantik, Menkes BGS Kini Dibantu 2 Wamen",
-        "slug" => "benjamin-paulus-dilantik,-menkes-bgs-kini-dibantu-2-wamen",
+        "judul" => "Farel",
+        "slug" => "farel",
         "penulis" => "detikhealth",
-        "konten" => "Kementerian Kesehatan RI menyebut pengangkatan dr Benjamin Paulus Octavianus sebagai Wakil Menteri Kesehatan tidak mengganti posisi Dante Saksono Harbuwono. Kepala Biro Komunikasi dan Informasi Publik Aji Muhawarman menyebut pengangkatan tersebut menambah posisi wamenkes."
+        "konten" => "ra reti."
         ],
         
         [

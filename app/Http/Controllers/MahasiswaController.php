@@ -7,48 +7,54 @@ use App\Models\Mahasiswa;
 
 class MahasiswaController extends Controller
 {
-    public function index()
+    public function index () 
     {
 
         $data = Mahasiswa::all();
 
-       
-        return view('Mahasiswa', compact('data'),[
-            "title" => "Data Mahasiswa",
+    return view ('mahasiswa', compact ('data'), [
+        "title" => "Data Mahasiswa",
+    ]);
+}
+}
+
+
+public tambahmahasiswa index () 
+    {
+
+        $data = Mahasiswa::all();
+
+    return view ('mahasiswa', compact ('data'), [
+        "title" => "Data Mahasiswa",
+    ]);
+
+public function insertdata (Request $request)
+    {
+        Mahasiswa::create($request->all());
+        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Ditambahkan');
+    }
+
+    
+
+    public function tampildata [$id]
+    (
+        $data = mahasiswa ::find [$id]
+        return view["edit"], [
+            "title" "edit data mahasiswa"
+            "data" $data,
+        ]);
+
+        public function editdata[$request, $id]
+        {
+            $data= Mahasiswa:: find($id);
             
-        ]);
-    }
-    public function tambahmahasiswa()
-    {
-        return view('tambahmahasiswa',[
-            "title" => "Tambah Data Mahasiswa",
-        ]);
-    }
+            $data -> update($request -> all();)
 
-    public function insertdata(Request $request)
-    {
-        $data = Mahasiswa::create($request->all());
+        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Diedit');
+        }
 
-        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Di Tambahkan');
-    }
-
-    public function tampildata($id)
-    {
-        $data = Mahasiswa::find($id);
-
-        return view("edit", [
-            "title" => "Edit Mahasiswa",
-            "data" => $data,
-        ]);
-    }
-
-    public function editdata(Request $request, $id)
-    {
-        $data = Mahasiswa::find($id);
-
-        $data->update($request->all());
-
-        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Di Edit!');
-    }
+    
 
 }
+
+

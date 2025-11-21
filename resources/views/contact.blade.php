@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-<h1>halo gays</h1>
+<h1>wok</h1>
 
 @endsection
