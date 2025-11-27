@@ -8,7 +8,7 @@
     @csrf
   <div class="mb-3">
     <label for="name" class="form-label">Nama</label>
-    <input type="text" name = "nama" id = "nama" placeholder="Nama Lengkap" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" name = "name" id = "name" placeholder="Nama Lengkap" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="nim" class="form-label">NIM</label>

@@ -13,17 +13,17 @@ Route::get('/', function () {
 
 Route::get('/profile', function () {
     return view('profile',[
-        "title" => "profile",
-        "nama" => "Muhammad Farel",
+        "title" => "Profile",
+        "nama" => "Farhat Kasyiful Kurob",
         "nohp" => "085800661620",
-        "foto" => "images/images.jpg",
+        "foto" => "images/132098-1700211169.webp",
     ]);
 });
 
 Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{slug}', [BeritaController::class,'tampildata']);
 
-Route::get('/mahasiswa', [MahasiswaController::class,'index'])->name('mahasiswa');
+Route::get('/datamahasiswa', [MahasiswaController::class,'index'])->name('datamahasiswa');
 Route::get('/tambahmahasiswa', [MahasiswaController::class, 'tambahmahasiswa'])->name('mahasiswa.tambah');
 Route::post('/insertdata', [MahasiswaController::class, 'insertdata'])->name('insertdata');
 
@@ -32,6 +32,7 @@ Route::get('/tampildata/{id}',[MahasiswaController::class, 'tampildata'])->name(
 
 Route::post('/editdata/{id}',[MahasiswaController::class, 'editdata'])->name('editdata');
 
+Route::get('/delete/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
 
 Route::get('/contact', function () {
     return view('contact', [

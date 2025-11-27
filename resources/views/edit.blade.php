@@ -9,8 +9,8 @@
             @csrf
     <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nama</label>
-    <input type="text" name="name" id="nama" value="{{ $data['nama'] }}" placeholder="Nama Lengkap" class="form-control" aria-describedby="emailHelp">
+    <label for="name" class="form-label">Nama</label>
+    <input type="text" name="name" id="name" value="{{ $data['name'] }}" placeholder="Nama Lengkap" class="form-control" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="nim" class="form-label">NIM</label>

@@ -24,16 +24,16 @@
     @foreach ($data as $mahasiswa)
     <tr>
         <th scope="row"><?php echo $i?></th>
-        <td>{{$mahasiswa["nama"]}}</td>
+        <td>{{$mahasiswa["name"]}}</td>
         <td>{{$mahasiswa["nim"]}}</td>
         <td>{{$mahasiswa["prodi"]}}</td>
         <td>{{$mahasiswa["email"]}}</td>
         <td>{{$mahasiswa["nohp"]}}</td>
         <td>
             <a href="tampildata/{{ $mahasiswa['id'] }}" class="btn btn-primary">EDIT</a>
-            <button type="button" class="btn btn-danger">HAPUS</button>
-        </td>
-        <?php $i++?>
+<a href="/delete/{{ $mahasiswa['id'] }}" class="btn btn-danger" onclick="return confirm('Yakin mau hapus data ini?')">HAPUS</a>        </td>
+       
+<?php $i++?>
     </tr>
     @endforeach
   </tbody>

@@ -29,7 +29,7 @@ class MahasiswaController extends Controller
     {
         $data = Mahasiswa::create($request->all());
 
-        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Di Tambahkan');
+        return redirect()->route('datamahasiswa')->with('success', 'Data Berhasil Di Tambahkan');
     }
 
     public function tampildata($id)
@@ -50,5 +50,13 @@ class MahasiswaController extends Controller
 
         return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Di Edit!');
     }
+
+public function delete($id)
+{
+    $data = Mahasiswa::find($id);
+    $data->delete();
+    
+    return redirect('/datamahasiswa')->with('success', 'Data Berhasil Dihapus!');
+}
 
 }
