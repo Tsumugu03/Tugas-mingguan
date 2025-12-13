@@ -3,11 +3,13 @@
 @section('title', 'Data Mahasiswa')
 
 @section('content')
-<h1 class="text-center"> Data Mahasiswa</h1>
-    <div class="row">
-      <a href="/tambahmahasiswa">
-        <button type="button" class="btn btn-success">Tambah Data</button>
-        <table class="table">
+<div class="content-panel card p-4">
+  <h1 class="text-center">Data Mahasiswa</h1>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <a href="/tambahmahasiswa" class="btn btn-primary">Tambah Data</a>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-borderless mb-0">
   <thead>
     <tr>
       <th scope="col">No</th>
@@ -38,5 +40,6 @@
     @endforeach
   </tbody>
 </table>
+  </div>
 </div>
 @endsection

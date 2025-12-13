@@ -7,10 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Cyberpunk theme -->
+    <link rel="stylesheet" href="/css/cyber.css">
 </head>
 <body>
     <!-- ✅ Navbar harus di sini -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">LaravelTI</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +41,11 @@
 
     <!-- Konten halaman -->
     <div class="container">
-        @yield('content')
+        <div class="row">
+            <div class="col-12">
+                @yield('content')
+            </div>
+        </div>
     </div>
 
     <!-- Script -->
