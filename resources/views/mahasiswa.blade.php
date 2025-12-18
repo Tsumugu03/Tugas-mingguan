@@ -33,7 +33,8 @@
         <td>{{$mahasiswa["nohp"]}}</td>
         <td>
             <a href="tampildata/{{ $mahasiswa['id'] }}" class="btn btn-primary">EDIT</a>
-<a href="/delete/{{ $mahasiswa['id'] }}" class="btn btn-danger" onclick="return confirm('Yakin mau hapus data ini?')">HAPUS</a>        </td>
+            <a href="javascript:void(0)" class="btn btn-danger btn-hapus" data-id="{{ $mahasiswa['id'] }}">HAPUS</a>
+        </td>
        
 <?php $i++?>
     </tr>
@@ -42,4 +43,37 @@
 </table>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btnHapus = document.querySelectorAll('.btn-hapus');
+    
+    btnHapus.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            
+            Swal.fire({
+                title: "Yakin mau hapus data ini?",
+                width: 600,
+                padding: "3em",
+                color: "#716add",
+                background: "#fff url(https://sweetalert2.github.io/images/trees.png)",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("https://sweetalert2.github.io/images/nyan-cat.gif")
+                    left top
+                    no-repeat
+                `,
+                showCancelButton: true,
+                confirmButtonText: 'Ya, Hapus!',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/delete/' + id;
+                }
+            });
+        });
+    });
+});
+</script>
 @endsection
