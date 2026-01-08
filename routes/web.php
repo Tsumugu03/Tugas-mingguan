@@ -23,7 +23,14 @@ Route::get('/profile', function () {
 Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{slug}', [BeritaController::class,'tampildata']);
 
-Route::get('/datamahasiswa', [MahasiswaController::class,'index'])->name('datamahasiswa');
+// Authentication routes
+Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login.attempt');
+Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
+// Protected mahasiswa routes
+Route::middleware('auth')->group(function () {
+    Route::get('/datamahasiswa', [MahasiswaController::class,'index'])->name('datamahasiswa');
 Route::get('/tambahmahasiswa', [MahasiswaController::class, 'tambahmahasiswa'])->name('mahasiswa.tambah');
 Route::post('/insertdata', [MahasiswaController::class, 'insertdata'])->name('insertdata');
 
@@ -33,6 +40,7 @@ Route::get('/tampildata/{id}',[MahasiswaController::class, 'tampildata'])->name(
 Route::post('/editdata/{id}',[MahasiswaController::class, 'editdata'])->name('editdata');
 
 Route::get('/delete/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
+});
 
 Route::get('/contact', function () {
     return view('contact', [

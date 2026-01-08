@@ -19,21 +19,36 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item ">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/profile') }}">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/berita">berita</a>
+                    <a class="nav-link" href="/berita">Berita</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact">contact</a>
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/datamahasiswa">Data Mahasiswa</a>
+                </li>
+                <li class="nav-item">
+                    @auth
+                        <span class="nav-link">{{ Auth::user()->name }}</span>
+                    @endauth
+                </li>
+                <li class="nav-item">
+                    @auth
+                        <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                            @csrf
+                            <button type="submit" class="btn btn-sm btn-danger" style="margin-top: 5px;">Logout</button>
+                        </form>
+                    @else
+                        <a class="nav-link btn btn-sm btn-primary text-white" href="{{ route('login') }}" style="margin-top: 5px;">Login</a>
+                    @endauth
                 </li>
             </ul>
         </div>
