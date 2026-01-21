@@ -15,7 +15,7 @@ Route::get('/profile', function () {
     return view('profile',[
         "title" => "Profile",
         "nama" => "Farhat Kasyiful Kurob",
-        "nohp" => "085800661620",
+        "nohp" => "0818657584",
         "foto" => "images/132098-1700211169.webp",
     ]);
 });
